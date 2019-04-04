@@ -6,10 +6,11 @@
     2. 为了完成注册需要实现一个[TransportRequest](../../transport/TransportRequest.md)的子类和[TransportRequestHandler](../../transport/TransportRequestHandler.md)
     3. 当前类的handler中只是实现了公共的接收请求和返回响应的逻辑，实际的处理逻辑要调用listener的onJoin和onLeave等来实现
     4. 在调用listener的onJoin和onLeave时会同步传入执行完成callback，以在实际逻辑处理成功或失败时，调用callback来产生返回报文。
+    ![流程图](../../images/MembershipActionProcess.png)
 3. 提供一些内置的加入集群验证器
 
 #### 2. 成员描述
-![类图](./MembershipAction.png)
+![类图](../../images/MembershipAction.png)
 ##### 1. 字段
 1. DISCOVERY_JOIN_ACTION_NAME、DISCOVERY_JOIN_VALIDATE_ACTION_NAME、DISCOVERY_LEAVE_ACTION_NAME分别定义了``加入集群``,``加入集群验证``和``离开集群``的请求action名，用于发出请求和注册handler时使用
 2. transportService用于发起transport请求或注册handler用于接收其他节点的请求
