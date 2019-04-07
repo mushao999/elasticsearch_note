@@ -16,7 +16,10 @@ https://github.com/mushao999/elasticsearch/blob/6.5_michelmu_note/server/src/mai
     ![流程图](../../../../images/MembershipActionProcess.png)
 3. **内置加入集群验证器**：主要是对版本兼容性，索引兼容性等进行校验，防止出现兼容性问题
 
-### 2. 成员描述
+### 3. 继承关系
+该类继承自[AbstractComponent](../../common/component/AbstractComponent.md), 该类抽象出了所有节点都需要用到的日志，过期日志，配置等信息
+
+### 4. 成员描述
 ![类图](../../../../images/MembershipAction.png)
 #### 1. 字段
 1. DISCOVERY_JOIN_ACTION_NAME、DISCOVERY_JOIN_VALIDATE_ACTION_NAME、DISCOVERY_LEAVE_ACTION_NAME分别定义了``加入集群``,``加入集群验证``和``离开集群``的请求action名，用于发出请求和注册handler时使用
