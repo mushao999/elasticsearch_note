@@ -1,10 +1,10 @@
 https://github.com/mushao999/elasticsearch/blob/6.5_michelmu_note/server/src/main/java/org/elasticsearch/discovery/zen/MembershipAction.java
 ### 1. 简述
-**<font color="Orange">节点关系交互动作类</font>**<br>
+**<font style="color:Orange">节点关系交互动作类</font>**<br>
 该的类功能有三：
-1. **<font color="Orange">向其他节点发请求</font>**：封装了对其他节点的 *加入集群*，*加入集群验证*, *离开集群* 等请求
-2. **<font color="Orange">注册接受其他节点请求的接口</font>**：注册接受其他节点 *加入集群*，*加入集群验证*, *离开集群* 等请求的接口，以便接受并处理其他节点的请求。
-3. **<font color="Orange">提供了三个内置的加入集群验证器</font>**：用于在节点加入集群时对节点进行验证，包括版本兼容性验证，索引兼容性验证等。
+1. **<font style="color:Orange">向其他节点发请求</font>**：封装了对其他节点的 *加入集群*，*加入集群验证*, *离开集群* 等请求
+2. **<font style="color:Orange">注册接受其他节点请求的接口</font>**：注册接受其他节点 *加入集群*，*加入集群验证*, *离开集群* 等请求的接口，以便接受并处理其他节点的请求。
+3. **<font style="color:Orange">提供了三个内置的加入集群验证器</font>**：用于在节点加入集群时对节点进行验证，包括版本兼容性验证，索引兼容性验证等。
 
 ### 2. 详细描述
 1. **发起请求**：直接调用[TransportService](../../transport/TransportService.md)的发起请求类进行请求发送
