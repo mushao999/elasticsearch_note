@@ -29,5 +29,3 @@ handleJoinRequest
 
 <span id="innerClose">**innerClose**</span><br>
 使用原子类的getAndSet来将ElectionContext的原子布尔关闭标识``closed``设置为true, 表示ElectionConext已经关闭
-
-<span id="">****</span><br>
