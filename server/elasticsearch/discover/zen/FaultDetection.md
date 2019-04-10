@@ -5,7 +5,7 @@
 ![FaultDetection](../../../../images/FaultDetectionProcess.png)
 
 
-### 2. 相关成员
+### 2. 类结构
 ![类图](../../../../images/FaultDetection.png)
 #### 1. 继承关系
 1. 继承自[AbstractComponent](../../common/component/AbstractComponent.md)继承了一些日志，配置等通用组件相关的字段和方法
