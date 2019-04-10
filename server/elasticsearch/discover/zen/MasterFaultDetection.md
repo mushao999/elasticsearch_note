@@ -1,7 +1,6 @@
 参考文章：
 - [官方文档集群故障检测（ES7.x）](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/cluster-fault-detection.html)
 - [官方文档节点故障检测文档（ES6.7）](https://www.elastic.co/guide/en/elasticsearch/reference/6.7/modules-discovery-zen.html#fault-detection)
-- [ElasticSearch Master、Node故障检测](https://www.jianshu.com/p/9f7282288858)
 
 ### 1.简述
 **<font style="color:Orange">主节点故障检测类</font>**<br>
@@ -21,7 +20,7 @@
   - 紫色部分为请求处理的核心逻辑
 - 该类对外主要暴露的接口有 restart()、 stop()、addListener()和removeListener()， close(),以及响应ping的接口
 该类初始化完成后被动检测已经开启，restart开启主动检测， stop关闭主动检测， addListener和removeListener添加监听器，close()释放所有listener，响应ping的接口用于处理其他节点发送来的ping请求
-### 3.类结构
+### 2.类结构
 ![类图](../../../../images/MasterFaultDetection.png)
 #### 1.继承关系
 继承自类[FaultDetection](./FaultDetection.md)，该类实现了对Transport连接断开事件的监听，并对子类暴露了handleTransportDisconnect方法，子类只需要重写该方法接口实现对Transport连接断开事件（节点故障）的监听。
